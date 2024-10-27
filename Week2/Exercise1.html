@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        #heading {
+            color: purple;
+        }
+        #paragraph {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="heading">Jovan's Webpage</h1>
+    <p id="paragraph">My ID is 5618</p>
+    <button id="button">Change Color</button>
+
+    <script>
+        const body = document.body;
+        const heading = document.getElementById('heading');
+        const paragraph = document.getElementById('paragraph');
+        const button = document.getElementById('button');
+
+        let original = true;
+        button.addEventListener('click', () => {
+        if (original) {
+            heading.style.color = 'orange';
+            paragraph.style.color = 'black';
+            body.style.backgroundColor = 'white';
+            original = false;
+        }   
+        else {
+            heading.style.color = 'purple';
+            paragraph.style.color = 'white';
+            body.style.backgroundColor = 'black';
+            original = true;
+        }
+    });
+    </script>
+</body>
+</html>
